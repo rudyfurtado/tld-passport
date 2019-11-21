@@ -29,7 +29,7 @@ const styles = {
   },
 };
 
-const url = 'http://localhost:8000/api/passport';
+const url = 'http://localhost:8080/api/passport';
 
 export default class PassportUpload extends Component {
   constructor(props) {
@@ -46,12 +46,12 @@ export default class PassportUpload extends Component {
   eventHandler = (event) => {
     let fileName = event.target.files[0].name;
     this.processImage(fileName).then(res => {
-      if (res && res.data) this.setState({ passportInfo: res.data });
+      if (res && res.data) this.setState({ passportInfo: res.data, showResults: true });
     })
       .catch(err => {
         console.log(err);
       });
-    if (fileName) this.setState({ isUploading: true, fileName, showResults: true });
+    if (fileName) this.setState({ isUploading: true, fileName });
   }
 
   resetComponent = () => {
