@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
 import "./PassportUpload.css";
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import { classes } from 'istanbul-lib-coverage';
-import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import PassportInfo from '../PassportInfo/PassportInfo';
 import Axios from 'axios';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Fab from '@material-ui/core/Fab';
+import PassportInfo from '../PassportInfo/PassportInfo';
+import React, { Component } from 'react';
+
 const styles = {
   card: {
     minWidth: 375,
