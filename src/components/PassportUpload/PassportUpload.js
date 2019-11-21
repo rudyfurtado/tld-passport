@@ -38,7 +38,8 @@ export default class PassportUpload extends Component {
       isUploading: false,
       fileName: '',
       showResults: false,
-      passportInfo: ''
+      passportInfo: '',
+      imageFailed: false
     }
 
   }
@@ -49,6 +50,7 @@ export default class PassportUpload extends Component {
       if (res && res.data) this.setState({ passportInfo: res.data, showResults: true });
     })
       .catch(err => {
+        this.setState({ imageFailed: true });
         console.log(err);
       });
     if (fileName) this.setState({ isUploading: true, fileName });
@@ -83,6 +85,16 @@ export default class PassportUpload extends Component {
               <input id="fileInput" disabled={this.state.isUploading} type="file" onChange={event => this.eventHandler(event)} />
             </Fab>
           </CardContent>
+          {this.state.imageFailed ?
+            <Card style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <CardActions>
+                <Button size='large' color='primary' onClick={this.props.resetComponent}>
+                  Process New Passport
+            </Button>
+              </CardActions>
+            </Card>
+            : false
+          }
         </Card>
         : <PassportInfo passportInfo={this.state.passportInfo} resetComponent={this.resetComponent} />
     )
