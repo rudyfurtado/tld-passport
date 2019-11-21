@@ -91,9 +91,9 @@ export default class PassportUpload extends Component {
           {this.state.imageFailed ?
             <Card style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <CardActions>
-                <Button size='large' color='primary' onClick={this.props.resetComponent}>
-                  Process New Passport
-            </Button>
+                <Button size='large' color='secondary' onClick={this.resetComponent}>
+                  Image could not be processed, Process New Passport.
+                </Button>
               </CardActions>
             </Card>
             : false
