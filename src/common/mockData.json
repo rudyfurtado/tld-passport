@@ -1,0 +1,39 @@
+{
+  "country": {
+    "data": "PRT",
+    "isValid": true
+  },
+  "number": {
+    "data": "1700044<<",
+    "isValid": true
+  },
+  "dateOfBirth": {
+    "data": "740407",
+    "isValid": true
+  },
+  "expirationDate": {
+    "data": "220616",
+    "isValid": true
+  },
+  "nationality": {
+    "data": "PRT",
+    "isValid": true
+  },
+  "sex": {
+    "data": "F",
+    "isValid": true
+  },
+  "names": {
+    "data": "INES",
+    "isValid": true
+  },
+  "surname": {
+    "data": "GARCAO DE MAGALHAES",
+    "isValid": true
+  },
+  "personalNumber": {
+    "data": "99999999<<<<<<",
+    "isValid": true
+  },
+  "warning": false
+}

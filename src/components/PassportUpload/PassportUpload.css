@@ -1,0 +1,13 @@
+.image-upload>input {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#fileInput{
+  display: none;
+}
+
+
+.input-label {
+  display: flex;
+}
